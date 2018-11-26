@@ -1,0 +1,55 @@
+<div class="card">
+  <!-- card header start -->
+  <div class="card-header">
+    <h5 class="card-title">Promotion Request</h5>
+  </div>
+  <!-- card-header end -->
+  <!-- card body start -->
+  <div class="card-body nopadding">
+    <div class="card-body">
+      <div class="row" >
+        <form #addRequestPro="ngForm">
+        {{addRequestPromotionObj | json}}
+        <pre>
+          {{addRequestPro.value | json}}
+        </pre>
+        <div class="col-md-12">
+          <!-- card body start -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="usrid">User ID</label>
+                <input type="text" class="form-control" id="usrid" name="usrid" [(ngModel)]="addRequestPromotionObj.userId" placeholder="User Id">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="desigId">Designation ID</label>
+                <input type="text" class="form-control" id="desigId" name="desigId" [(ngModel)]="addRequestPromotionObj.designationId" placeholder="Designation Id">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="recomby">Recommended By</label>
+                <input type="text" class="form-control" id="recomby" name="recomby" [(ngModel)]="addRequestPromotionObj.recommendedBy" placeholder="Recommended By">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="proremark">Promotion Remark</label>
+                <textarea class="form-control" name="proremark" id="proremark" [(ngModel)]="addRequestPromotionObj.promotionRemark" placeholder="promotion remark"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- card body end -->
+        </div>
+      </form>
+      </div>
+    </div>
+    <!-- card body end -->
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="addRequestPromotion()">Request</button>
+    </div>
+  </div>
+</div>

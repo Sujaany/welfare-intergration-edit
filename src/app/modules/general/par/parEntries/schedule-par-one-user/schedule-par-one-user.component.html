@@ -1,0 +1,93 @@
+<div class="card">
+  <!-- card header start -->
+  <div class="card-header">
+    <h5 class="card-title">Schedule Single User</h5>
+  </div>
+  <!-- card heder end  -->
+  <div class="card-body nopadding">
+    <div class="card-body">
+      <div class="row" [formGroup]="firstFormGroup">
+        <div class="col-md-4">
+            <div class="card card-primary">
+          <!-- card body start -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-primary">
+                <div class="col-md-12">
+                  <form [formGroup]="firstFormGroup">
+                    <div class="form-group">
+                      <label>Par Id:</label>
+                      <input type="text" class="form-control" placeholder="Par ID" formControlName="parId" name="parId"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label>Employee Id:</label>
+                      <input type="text" class="form-control" placeholder="Employee Id" formControlName="empId" name="empId"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label>Schedule Date:</label>
+                      <input type="date" class="form-control" placeholder="Schdule Date" formControlName="parDate" name="parDate"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label>Schedule Time:</label>
+                      <input type="time" class="form-control" placeholder="Schedule Time" formControlName="parTime"
+                        name="parTime" required>
+                    </div>
+                  </form>
+                  <button (click)="pushEmp()">push Employee</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+
+            <button type="button" class="btn btn-primary"class="pull-right" (click)="pushEmp()">Push Employee</button>
+          </div>
+          <!-- card body end  -->
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-primary">
+          <h3 align="center">Appraisors List</h3>
+          <ul>
+              <li *ngFor="let parAppraisor of parAppraisorArray">
+                {{parAppraisor.empId}}
+                <!-- <label><input type="checkbox" [name]="parAppraisor.id" [(ngModel)]="parAppraisor.isActive"></label> -->
+                <mat-checkbox [name]="parAppraisor.id" [(ngModel)]="parAppraisor.isActive"></mat-checkbox>
+              </li>
+            </ul>
+          <div>
+            <button class="btn btn-primary" class="pull-right" (click)=" appraisorsListPush()">Appraisors Push</button>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-primary">
+          <!-- <div class="row"> -->
+            <form #formParConfig="ngForm">
+              <table>
+                <tr *ngFor="let parConfig of parConfigArray">
+                  <!-- <label><input type="checkbox" [name]="parConfig.id" [(ngModel)]="parConfig.isActive">{{parConfig.contentName}}</label> -->
+                  <mat-checkbox [name]="parConfig.id" [(ngModel)]="parConfig.isActive">{{parConfig.contentName}}</mat-checkbox>
+                </tr>
+                {{formParConfig.value | json}}
+                <button (click)="contentListPush()">push content </button>
+              </table>
+            </form>
+          <!-- </div> -->
+        </div>
+        </div>
+        <div class="row">
+
+          <button type="submit" class="btn btn-default" (click)="schedulePar()"class="pull-right">Schedule Par</button>
+
+        </div>
+      </div>
+    </div>
+    <!-- car body end -->
+
+  </div>
+</div>

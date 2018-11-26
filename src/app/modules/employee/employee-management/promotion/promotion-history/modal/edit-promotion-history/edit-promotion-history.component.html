@@ -1,0 +1,96 @@
+<div id="editPromotion" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- modal content start -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="card-title">Edit Promotion</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12">
+
+          <!-- form start -->
+          <!-- <form role="form">
+            <div class="mat-elevation-z8"> -->
+          <!-- card body start -->
+          <div [formGroup]="editpromotionhistory">
+            {{editpromotionhistory.value | json}}
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="proId">Promoted ID</label>
+                    <input type="number" class="form-control" formControlName="proId" name="proId" disabled>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="reqId">Request ID</label>
+                    <input type="number" class="form-control" formControlName="reqId" name="reqId" disabled>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="resigId">Designation ID</label>
+                    <input type="number" class="form-control" formControlName="resigId" name="resigId" disabled>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="position">Position</label>
+                    <select class="form-control" formControlName="positionname" name="positionname">
+                      <option>SE</option>
+                      <option>QA</option>
+                      <option>PM</option>
+                      <option>BA</option>
+                      <option>ASE</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="promoteddate">Promoted Date</label>
+                    <input type="Date" mwlFlatpickr class="form-control" formControlName="promoteddate" name="promoteddate">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" formControlName="salary" name="salary">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="promotionremark">Promotion Remark</label>
+                    <textarea class="form-control" formControlName="promotionremark" name="promotionremark"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="proBy">Promoted By</label>
+                    <input type="text" class="form-control" formControlName="proBy" name="proBy">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+            <!-- card body end -->
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPromotion">Update</button>&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-dismiss="modal" data-target="#">Cancel</button>
+            </div>
+            <!-- </form> -->
+            <!-- form end -->
+
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+      </div> -->
+
+      </div>
+      <!-- modal content end -->
+
+    </div>
+  </div>

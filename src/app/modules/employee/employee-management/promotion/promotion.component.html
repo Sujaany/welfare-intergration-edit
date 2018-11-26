@@ -1,0 +1,44 @@
+<div style="height:600px">
+    <h5>Promotion</h5>
+    <mat-tab-group>
+        <mat-tab label="Promotion Request">
+            <app-request-promotion></app-request-promotion>
+        </mat-tab>
+        <mat-tab label="Request History">
+            <app-promotion-eligibility></app-promotion-eligibility>
+        </mat-tab>
+        <!-- <mat-tab label="Promotion eligibility">
+            <mat-horizontal-stepper>
+                <mat-step label="Eligible Employees">
+                    <app-promotion-eligibility></app-promotion-eligibility>
+                </mat-step>
+                <mat-step label="Credit check">
+                    <app-promotion-eligibility-credit-check></app-promotion-eligibility-credit-check>
+                </mat-step>
+
+            </mat-horizontal-stepper> -->
+            <!-- <app-promotion-eligibility></app-promotion-eligibility> -->
+        <!-- </mat-tab> -->
+
+        <!-- <mat-tab label="Insert Promotion">
+            <app-insert-promotion></app-insert-promotion>
+        </mat-tab> -->
+
+        <mat-tab label="Promotion History">
+            <app-promotion-history></app-promotion-history>
+        </mat-tab>
+        <mat-tab label="Promotion Denied History">
+            <app-promotion-denied-history></app-promotion-denied-history>
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
+
+<app-edu-qual-list></app-edu-qual-list>
+<app-leave-hist-list></app-leave-hist-list>
+<app-par-hist-list></app-par-hist-list>
+
+<app-add-promotion></app-add-promotion>
+<app-add-denied-promotion></app-add-denied-promotion>
+<app-edit-promotion-history></app-edit-promotion-history>
+<app-edit-promotion-denied-history></app-edit-promotion-denied-history>

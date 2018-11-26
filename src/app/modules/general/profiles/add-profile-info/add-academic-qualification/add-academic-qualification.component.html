@@ -1,0 +1,100 @@
+  <!-- 2nd Form Start -->
+  <div class="card">
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">Academic Qualification</h5>
+  
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-widget="remove">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- card-header end -->
+  
+      <!-- card body start -->
+      <div class="card-body nopadding">
+        <!-- form start -->
+        <form role="form">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset>
+                  
+                  <!-- card body start -->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name-school">Name of School</label>
+                        <input type="text" class="form-control" id="primary-year-form" name="school" placeholder="Name of School"[(ngModel)]="academicObj.schoolName">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">Period Year</label>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <input type="text" class="form-control" id="school-from" name="fromyear" placeholder="From" [(ngModel)]="academicObj.periodYearFrom">
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control" id="school-to" name="toyear" placeholder="To" [(ngModel)]="academicObj.periodYearTo">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                          <label for="position">Result:</label>
+                          <!-- <select><input type="text" class="form-control" name="position" id="position" placeholder="Enter Position"> -->
+                          <select class="form-control" >
+                            <option>Passed</option>
+                            <option>Failed</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="school-year-graduation">Year of Examination</label>
+                        <input type="text" class="form-control" id="school-year-graduation" placeholder="Year of Graduation" name="examyear" [(ngModel)]="academicObj.examinationYear">
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="university-grading">Subject offered & Grading</label>
+                        <input type="text" class="form-control" id="university-grading" placeholder="Subject offered & Grading">
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="position">Exam Type:</label>
+                        <!-- <select><input type="text" class="form-control" name="position" id="position" placeholder="Enter Position"> -->
+                        <select class="form-control" >
+                          <option>Ordinary Level</option>
+                          <option>Advanced Level</option>
+                        </select>
+                    </div>
+                  </div>
+                </fieldset>
+               
+                <!-- card body end -->
+              </div>
+            </div>
+          </div>
+          <!-- card body end -->
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary" (click)="previous() " >Previous</button> &nbsp;
+            <button type="button" class="btn btn-primary" (click)="createAcademicQualification()" >Next</button>
+           
+            <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Delete</button> -->
+          </div>
+        </form>
+        <!-- form end -->
+      </div>
+    </div>
+    <!-- 2nd Form End -->
+  

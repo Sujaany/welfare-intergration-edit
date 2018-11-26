@@ -1,0 +1,37 @@
+<!-- <app-add-individuals-complains></app-add-individuals-complains>
+<app-view-individuals-complains></app-view-individuals-complains>
+<app-view-hr-complains-history></app-view-hr-complains-history>
+<app-view-individuals-complains-history></app-view-individuals-complains-history>
+<app-add-response></app-add-response> -->
+
+<div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                        <div class="tab" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation">
+                                                <a class="active" routerLinkActive="active" routerLink="addIndividualComplaint"
+                                                        aria-controls="home" role="tab" data-toggle="tab">Complain</a></li>
+                                        <li role="presentation">
+                                                <a routerLinkActive="active" routerLink="viewIndividualComplaint" aria-controls="profile"
+                                                        role="tab" data-toggle="tab">View Individual Complain</a></li>
+                                        <li role="presentation">
+                                                <a routerLinkActive="active" routerLink="viewIndividualComplainHistory"
+                                                        aria-controls="messages" role="tab" data-toggle="tab">View
+                                                        Individuals Complain History</a></li>
+                                        <li role="presentation">
+                                                <a routerLinkActive="active" routerLink="viewAllComplainHistory"
+                                                        aria-controls="messages" role="tab" data-toggle="tab">View All
+                                                        Complain History</a></li>
+                                        <li role="presentation">
+                                                <a routerLinkActive="active" routerLink="viewResponse"
+                                                        aria-controls="messages" role="tab" data-toggle="tab">Response</a></li>
+                                       
+                                </ul>
+
+                                <router-outlet></router-outlet>
+                        </div>
+                </div>
+        </div>
+</div>

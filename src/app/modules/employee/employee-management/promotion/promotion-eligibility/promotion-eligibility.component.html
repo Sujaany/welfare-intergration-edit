@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+          <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+        <div class="mat-elevation-z8">
+          <mat-table [dataSource]="dataSource">
+            <!-- column 1 start -->
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Request ID</mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.id}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+            <!-- column 2 start -->
+            <ng-container matColumnDef="userId">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>User ID</mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.userId}} </mat-cell>
+            </ng-container>
+            <!-- column 2 end -->
+            <!-- column 3 start -->
+            <ng-container matColumnDef="designationId">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Designation ID</mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.designationId}} </mat-cell>
+            </ng-container>
+            <!-- column 3 end -->
+            <!-- column 4 start -->
+            <ng-container matColumnDef="recommendedBy">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Recommended By </mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.recommendedBy}}</mat-cell>
+            </ng-container>
+            <!-- column 4 end -->
+            <!-- column 5 start -->
+            <ng-container matColumnDef="promotionRemark">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Remark </mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.promotionRemark}}</mat-cell>
+            </ng-container>
+            <!-- column 5 end -->
+            <!-- column 7 start -->
+            <ng-container matColumnDef="createdAt">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Request Date</mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion"> {{reqPromotion.createdAt}}</mat-cell>
+            </ng-container>
+            <!-- column 7 end -->
+            <ng-container matColumnDef="check">
+              <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+              <mat-cell *matCellDef="let reqPromotion">
+                <!-- <button type="button" class="btn btn-primary btn-sm " matStepperNext>
+                  Validate
+                </button> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#insertPromotion">Promote</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deniedPromotion">Denied</button>
+
+              </mat-cell>
+            </ng-container>
+            <!-- column 6 end -->
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <!-- pagination start -->
+          <mat-paginator [pageSizeOptions]="[3, 5, 10, 25]" showFirstLastButtons></mat-paginator>
+          <!-- pagination end -->
+        </div>
+      </div>
+      <!-- card body end -->
+    </div>
+  </div>
+</div>

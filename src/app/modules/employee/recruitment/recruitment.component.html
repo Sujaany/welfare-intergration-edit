@@ -1,0 +1,74 @@
+<div style="height:600px">
+    <h5>Interview</h5>
+    <mat-tab-group>
+        <mat-tab label="Plan Vacancies">
+            <app-plan-vacancies></app-plan-vacancies>
+            <app-view-plan-vacancies></app-view-plan-vacancies>
+        </mat-tab>
+
+        <mat-tab label="Job Role Template">
+            <app-job-role-template></app-job-role-template>
+        </mat-tab>
+
+        <mat-tab label="CV Of Applicants">
+            <app-record-applicant-cv></app-record-applicant-cv>
+            <app-view-record-applicant-cv></app-view-record-applicant-cv>
+        </mat-tab>
+
+        <mat-tab label="Interview Selection">
+            <app-interview-selection></app-interview-selection>
+            <app-view-district></app-view-district>
+            <app-view-highest-qualification></app-view-highest-qualification>
+            <app-view-recruitment-type></app-view-recruitment-type>
+            
+        </mat-tab>
+
+        <mat-tab label="Add Interview History">
+            <mat-horizontal-stepper>
+                <mat-step label="Interview Details">
+                    <app-add-interview-history></app-add-interview-history>
+                </mat-step>
+                <mat-step label="Interview Panel Details">
+                    <app-add-interview-panel></app-add-interview-panel>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+        </mat-tab>
+
+        <mat-tab label="View Interview History">
+            <app-view-interview-history></app-view-interview-history>
+            <app-view-interview-panel></app-view-interview-panel>
+            <app-add-district></app-add-district>
+            <app-add-highest-qualification></app-add-highest-qualification>
+            <app-add-recruitment-type></app-add-recruitment-type>
+            
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
+
+<app-delete-view-plan-vacancies></app-delete-view-plan-vacancies>
+<app-edit-view-plan-vacancies></app-edit-view-plan-vacancies>
+<app-viewall-view-plan-vacancies></app-viewall-view-plan-vacancies>
+
+<app-job-role-template-form></app-job-role-template-form>
+
+<app-edit-view-record-applicant-cv></app-edit-view-record-applicant-cv>
+<app-delete-view-record-applicant-cv></app-delete-view-record-applicant-cv>
+
+<app-reject-interview-selection></app-reject-interview-selection>
+<app-select-interview-selection></app-select-interview-selection>
+
+<app-delete-recruitment-type></app-delete-recruitment-type>
+<app-edit-recruitment-type></app-edit-recruitment-type>
+<app-edit-view-highest-qualification></app-edit-view-highest-qualification>
+<app-delete-view-highest-qualification></app-delete-view-highest-qualification>
+<app-edit-view-district></app-edit-view-district>
+<app-delete-view-district></app-delete-view-district>
+
+<!-- <app-view-interview-history-internal-external></app-view-interview-history-internal-external>
+<app-view-interview-history-selected-rejected></app-view-interview-history-selected-rejected>
+<app-view-interview-panel-form></app-view-interview-panel-form> -->
+<!-- <app-add-district></app-add-district>
+<app-add-highest-qualification></app-add-highest-qualification>
+<app-add-recruitment-type></app-add-recruitment-type> -->

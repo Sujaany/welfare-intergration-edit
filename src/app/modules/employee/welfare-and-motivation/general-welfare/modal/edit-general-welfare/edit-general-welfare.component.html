@@ -1,0 +1,87 @@
+<!-- Edit Model -->
+
+<!-- add modal start -->
+<div id="editgeneralwelmodal" class="modal fade">
+  <div class="modal-dialog">
+    <!-- modal content start -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Edit Welfare Details</h6>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12">
+          <!-- form start -->
+          <form #generalWelfareForm="ngForm">
+          <!-- <form [formGroup]="editgeneralWelfare"> -->
+
+            <!-- card body start -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="welfare id">Welfare ID</label>
+                  <input type="email" class="form-control" id="id" name="id" disabled [(ngModel)]="GeneralWelfareObj.id">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="welfare name"> Welfare & Motivation</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Welfare & Motivation ID" [(ngModel)]="GeneralWelfareObj.name">
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="allocationdetails"> Allocation Details</label>
+                  <textarea type="text" class="form-control" id="allocationdetails" name="allocationdetails"
+                    placeholder="Enter Allocation Details" [(ngModel)]="GeneralWelfareObj.allocationdetails"></textarea>
+                </div>
+              </div>
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="Update()"> Update </button>
+      </div>
+      <!-- form end -->
+
+    </div>
+  </div>
+  <!-- modal content end -->
+</div>
+
+<!-- edit modal end -->
+
+<!-- delete model -->
+
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="deletegeneralwelmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Delete welfare details?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          Are you want to delete allowance details?
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="Yes()">Yes</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="No()">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

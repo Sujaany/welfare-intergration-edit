@@ -1,0 +1,93 @@
+<!-- request leave start -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">ASSIGN ROLES & RESPONSIBILITES</h5>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-widget="remove">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- card-header end -->
+
+      <!-- card body start -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+
+              <!-- form start -->
+              <form role="form">
+
+                <!-- card body start -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="start-date">Employee ID</label>
+                        <input type="email" class="form-control" id="start-date" name="userId" [(ngModel)]="rolesandResObj.userId">
+                      </div>
+                    </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="end-date">Job Title</label>
+                          <input type="text" class="form-control" name="start-date" id="end-date" name="jobId"
+                            [(ngModel)]="rolesandResObj.jobId.jobName">
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="leave-days">Responsibility for</label>
+                          <input type="text" class="form-control" name="start-date" id="end-date" name="responsibility"
+                            [(ngModel)]="rolesandResObj.responsibility">
+
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Location</label>
+                          <input type="text" class="form-control" name="start-date" id="end-date" name="locatioId"
+                            [(ngModel)]="rolesandResObj.locatioId.locationName">
+
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Overall purpose of the job:</label>
+                          <textarea class="form-control" name="overAllPurpose" [(ngModel)]="rolesandResObj.overAllPurpose"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Key Activities</label>
+                          <textarea class="form-control" name="keyActivityId" [(ngModel)]="rolesandResObj.keyActivityId.name"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card body end -->
+
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" (click)="addRolesAndResponsibilities()">Add</button>
+                  </div>
+              </form>
+              <!-- form end -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- card body end -->
+
+    </div>
+  </div>
+</div>
